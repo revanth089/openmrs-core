@@ -81,7 +81,13 @@ public class ModuleResourcesServlet extends HttpServlet {
 	 */
 	protected File getFile(HttpServletRequest request) {
 		
+		String uriPathRegex = "^(/[^/ ]*)+/?$"; 
 		String path = request.getPathInfo();
+		
+		if(!path.matches(uriPathRegex)){
+			throw new RuntimeException("Invalid File Path");
+		}
+		
 		
 		Module module = ModuleUtil.getModuleForPath(path);
 		if (module == null) {

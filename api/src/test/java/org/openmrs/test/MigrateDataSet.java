@@ -47,7 +47,7 @@ public class MigrateDataSet {
 	private static String[] credentials = BaseContextSensitiveTest
 	        .askForUsernameAndPassword("Enter your MYSQL DATABASE username and password");
 	
-	private static String tempDatabaseName = "junitmigration";
+	private static String tempDatabaseName = "junitmigfration";
 	
 	/**
 	 * Do the stuff for this class (create the file)
